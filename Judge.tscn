@@ -1,0 +1,272 @@
+[gd_scene load_steps=44 format=2]
+
+[ext_resource path="res://assets/judges/m1gn.png" type="Texture" id=1]
+[ext_resource path="res://assets/judges/m1bl.png" type="Texture" id=2]
+[ext_resource path="res://assets/judges/m4gn.png" type="Texture" id=3]
+[ext_resource path="res://assets/judges/m4wt_gl.png" type="Texture" id=4]
+[ext_resource path="res://assets/judges/m4bl_gl.png" type="Texture" id=5]
+[ext_resource path="res://Judge.gd" type="Script" id=6]
+[ext_resource path="res://assets/judges/m3wt.png" type="Texture" id=7]
+[ext_resource path="res://assets/judges/m2bl.png" type="Texture" id=8]
+[ext_resource path="res://assets/judges/m1gr_gl.png" type="Texture" id=9]
+[ext_resource path="res://assets/judges/m3pr_gl.png" type="Texture" id=10]
+[ext_resource path="res://assets/judges/m1wt_gl.png" type="Texture" id=11]
+[ext_resource path="res://assets/judges/m2gr_gl.png" type="Texture" id=12]
+[ext_resource path="res://assets/judges/m1pr.png" type="Texture" id=13]
+[ext_resource path="res://assets/judges/m1pr_gl.png" type="Texture" id=14]
+[ext_resource path="res://assets/judges/m4pr_gl.png" type="Texture" id=15]
+[ext_resource path="res://assets/judges/m4gr_gl.png" type="Texture" id=16]
+[ext_resource path="res://assets/judges/m1bl_gl.png" type="Texture" id=17]
+[ext_resource path="res://assets/judges/m1wt.png" type="Texture" id=18]
+[ext_resource path="res://assets/judges/m3gr_gl.png" type="Texture" id=19]
+[ext_resource path="res://assets/judges/m3pr.png" type="Texture" id=20]
+[ext_resource path="res://assets/judges/m4pr.png" type="Texture" id=21]
+[ext_resource path="res://assets/judges/m1gn_gl.png" type="Texture" id=22]
+[ext_resource path="res://assets/judges/m1gr.png" type="Texture" id=23]
+[ext_resource path="res://assets/judges/m3bu.png" type="Texture" id=24]
+[ext_resource path="res://assets/judges/m3gn.png" type="Texture" id=25]
+[ext_resource path="res://assets/judges/m4gr.png" type="Texture" id=26]
+[ext_resource path="res://assets/judges/m3gr.png" type="Texture" id=27]
+[ext_resource path="res://assets/judges/m4gn_gl.png" type="Texture" id=28]
+[ext_resource path="res://assets/judges/m2wt_gl.png" type="Texture" id=29]
+[ext_resource path="res://assets/judges/m2pl_gl.png" type="Texture" id=30]
+[ext_resource path="res://assets/judges/m3wt_gl.png" type="Texture" id=31]
+[ext_resource path="res://assets/judges/m3bu_gl.png" type="Texture" id=32]
+[ext_resource path="res://assets/judges/m2bl_gl.png" type="Texture" id=33]
+[ext_resource path="res://assets/judges/m3gn_gl.png" type="Texture" id=34]
+[ext_resource path="res://assets/judges/m2gn_gl.png" type="Texture" id=35]
+[ext_resource path="res://assets/judges/m4wt.png" type="Texture" id=36]
+[ext_resource path="res://assets/judges/m2pl.png" type="Texture" id=37]
+[ext_resource path="res://assets/judges/m2gr.png" type="Texture" id=38]
+[ext_resource path="res://assets/judges/m2gn.png" type="Texture" id=39]
+[ext_resource path="res://assets/judges/m2wt.png" type="Texture" id=40]
+[ext_resource path="res://assets/shadow.png" type="Texture" id=41]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "36",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ) ],
+"loop": true,
+"name": "34",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 32 ) ],
+"loop": true,
+"name": "18",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 33 ) ],
+"loop": true,
+"name": "12",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ) ],
+"loop": true,
+"name": "16",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ) ],
+"loop": true,
+"name": "22",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "11",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 24 ) ],
+"loop": true,
+"name": "17",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 28 ) ],
+"loop": true,
+"name": "29",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ) ],
+"loop": true,
+"name": "21",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "23",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 35 ) ],
+"loop": true,
+"name": "13",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "6",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 34 ) ],
+"loop": true,
+"name": "20",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ) ],
+"loop": true,
+"name": "30",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "7",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "14",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "28",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "27",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ) ],
+"loop": true,
+"name": "31",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "8",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "24",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "9",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ) ],
+"loop": true,
+"name": "26",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "10",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "33",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ) ],
+"loop": true,
+"name": "15",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": false,
+"name": "35",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ) ],
+"loop": true,
+"name": "4",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ) ],
+"loop": true,
+"name": "32",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "25",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 40 ) ],
+"loop": true,
+"name": "40",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ) ],
+"loop": true,
+"name": "19",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 39 ) ],
+"loop": true,
+"name": "37",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 37 ) ],
+"loop": true,
+"name": "39",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 38 ) ],
+"loop": true,
+"name": "38",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 48.0465, 139.586 )
+
+[node name="Judge" type="Area2D"]
+collision_layer = 2
+script = ExtResource( 6 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 1 )
+frames = SubResource( 1 )
+animation = "40"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -32.6886
+margin_top = 132.182
+margin_right = 31.3114
+margin_bottom = 172.182
+texture = ExtResource( 41 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.461273, 21.2192 )
+shape = SubResource( 2 )

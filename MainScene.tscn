@@ -1,0 +1,133 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://MainPlayer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Larger_Tiles_with_end.tres" type="TileSet" id=2]
+[ext_resource path="res://assets/audio/background_music.ogg" type="AudioStream" id=3]
+[ext_resource path="res://assets/Bradley Gratis.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://YearScale.tscn" type="PackedScene" id=5]
+[ext_resource path="res://LoadJson.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Music Mute.gd" type="Script" id=7]
+[ext_resource path="res://Instructions.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/title_screen.png" type="Texture" id=9]
+[ext_resource path="res://Splash.tscn" type="PackedScene" id=10]
+[ext_resource path="res://StatcUIComponents.gd" type="Script" id=11]
+[ext_resource path="res://BigDialog.tscn" type="PackedScene" id=12]
+[ext_resource path="res://DialogDynamicFontShortDesc.tres" type="DynamicFont" id=13]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/Bradley Gratis.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+font_data = ExtResource( 4 )
+
+[node name="MainScene" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 256, 224 )
+format = 1
+tile_data = PoolIntArray( 65533, 2, 0, 65534, 2, 0, 65535, 0, 0 )
+
+[node name="YearScale" parent="." instance=ExtResource( 5 )]
+position = Vector2( 38.1092, 500.417 )
+
+[node name="MainPlayer" parent="." instance=ExtResource( 1 )]
+position = Vector2( -122.35, -83.5227 )
+
+[node name="UIController" type="CanvasLayer" parent="."]
+script = ExtResource( 11 )
+
+[node name="Background" type="ColorRect" parent="UIController"]
+margin_right = 1020.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions" parent="UIController" instance=ExtResource( 8 )]
+visible = false
+margin_left = 10.7634
+margin_top = -4.63777
+margin_right = 1035.76
+margin_bottom = 592.362
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="UIController"]
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="Music Label" type="Label" parent="UIController/BackgroundMusic"]
+margin_left = 885.954
+margin_top = 563.788
+margin_right = 968.954
+margin_bottom = 584.788
+custom_fonts/font = SubResource( 2 )
+text = "Music:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music Mute" type="CheckButton" parent="UIController/BackgroundMusic"]
+margin_left = 933.746
+margin_top = 554.352
+margin_right = 1009.75
+margin_bottom = 594.352
+focus_mode = 0
+input_pass_on_modal_close_click = false
+pressed = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleScreen" type="TextureRect" parent="UIController"]
+margin_right = 1020.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texture" type="Sprite" parent="UIController/TitleScreen"]
+position = Vector2( 504, 300 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 9 )
+
+[node name="Splash" parent="UIController" instance=ExtResource( 10 )]
+
+[node name="LoadJson" parent="UIController" instance=ExtResource( 6 )]
+margin_bottom = 0.0
+
+[node name="Title Label" type="Label" parent="UIController"]
+margin_left = 9.0
+margin_top = 567.0
+margin_right = 1028.0
+margin_bottom = 599.0
+custom_fonts/font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialog" parent="UIController" instance=ExtResource( 12 )]
+visible = false
+margin_left = 30.9235
+margin_top = 25.0731
+margin_right = -33.0765
+margin_bottom = -54.9269
+
+[node name="Author Label" type="Label" parent="UIController"]
+anchor_right = 0.0146484
+anchor_bottom = 0.025
+margin_left = 10.1224
+margin_top = 545.455
+margin_right = 80.1224
+margin_bottom = 559.455
+custom_fonts/font = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="toggled" from="UIController/BackgroundMusic/Music Mute" to="UIController/BackgroundMusic/Music Mute" method="_on_Music_Mute_toggled"]

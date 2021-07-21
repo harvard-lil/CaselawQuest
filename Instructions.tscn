@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Instructions.gd" type="Script" id=1]
+[ext_resource path="res://assets/instructions.png" type="Texture" id=2]
+
+[node name="Instructions" type="Control"]
+margin_right = 439.0
+margin_bottom = 313.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = 287.491
+margin_top = 139.412
+margin_right = 722.491
+margin_bottom = 445.412
+texture = ExtResource( 2 )
+patch_margin_left = 24
+patch_margin_top = 27
+patch_margin_right = 35
+patch_margin_bottom = 28
+__meta__ = {
+"_edit_use_anchors_": false
+}

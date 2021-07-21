@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://TimelineElement.gd" type="Script" id=2]
+[ext_resource path="res://BigDialog.tscn" type="PackedScene" id=3]
+
+[node name="TimelineElement" type="Node2D"]
+position = Vector2( 0, 3.53165 )
+script = ExtResource( 2 )
+
+[node name="DateLabel" type="Label" parent="."]
+margin_left = -19.5053
+margin_top = -84.9195
+margin_right = 20.4947
+margin_bottom = -70.9195
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameLink" type="LinkButton" parent="."]
+margin_left = -52.0
+margin_top = -111.0
+margin_right = 53.0
+margin_bottom = -97.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialog" parent="." instance=ExtResource( 3 )]
+visible = false
+margin_left = -485.337
+margin_top = -249.399
+margin_right = -485.337
+margin_bottom = -249.399
+
+[connection signal="pressed" from="NameLink" to="." method="handleClick"]
