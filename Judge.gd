@@ -24,7 +24,7 @@ func handle_area_entered(player):
 	
 func handle_area_exited(player):
 	player.unregister_proximity(get_parent())
-
+	
 func _process(delta):
 	time_passed += delta
 	if time_passed > 0.3:

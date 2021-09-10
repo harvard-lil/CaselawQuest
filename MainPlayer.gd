@@ -39,7 +39,6 @@ func _physics_process(delta):
 		Input.is_action_just_released("move_left"):
 			sprite.play("stopped")
 		
-		
 		if Input.is_action_pressed("move_left"):
 			if Input.is_action_pressed("run toggle"):
 				vel.x -= run_speed 
@@ -47,7 +46,6 @@ func _physics_process(delta):
 			else:
 				vel.x -= speed 
 				sprite.play("moving")
-			
 		
 		if Input.is_action_pressed("move_right"):
 			if Input.is_action_pressed("run toggle"):
